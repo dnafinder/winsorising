@@ -48,4 +48,4 @@ y=92 19 101 58 102 91 26 78 10 13 1 101 86 85 15 89 89 25 2 41
 
 To cite this file, this would be an appropriate format:
 Cardillo G. (2011). WINSORISING: WINSORISING Data
-http://www.mathworks.com/matlabcentral/fileexchange/
+http://www.mathworks.com/matlabcentral/fileexchange/32327
