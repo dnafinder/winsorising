@@ -21,9 +21,9 @@ the 5% trimmed mean is the average of the 5th to 95th percentile of the
 data, while the 90% Winsorised mean sets the bottom 5% to the 5th
 percentile, the top 5% to the 95th percentile, and then averages the data   
 
-By itself, WINSORISING runs a demo
+Syntax: 	
+          Y=winsorising(X,W)
 
-Syntax: 	Y=winsorising(X,W)
           X - data matrix or vector
           For vectors, WINSORISING(X) is the winsorized X array. 
           For matrices, WINSORISING(X) is a matrix containing the 
