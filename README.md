@@ -1,0 +1,2 @@
+# winsorising
+Winsorising extreme values.
