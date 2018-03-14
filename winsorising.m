@@ -50,14 +50,11 @@ function y=winsorising(x,varargin)
 
 %Input error handling
 p = inputParser;
-validationx = @(x) all(isnumeric(x)) && all(isreal (x)) && all(isfinite(x));
-addRequired(p,'x',validationx);
-defaultw=90;
-validationw = @(x) isnumeric(x) && isscalar(x) && isreal (x) && isfinite(x) && (x > 0) && (x < 100);
-addOptional(p,'w',defaultw,validationw);
+addRequired(p,'x',@(x) validateattributes(x,{'numeric'},{'real','finite','nonnan'}));
+addOptional(p,'w',90, @(x) validateattributes(x,{'numeric'},{'scalar','real','finite','nonnan','>',0,'<',100}));
 parse(p,x,varargin{:});
 x=p.Results.x; w=p.Results.w;
-clear p default* validation*
+clear p
 
 rw=(100-w)/2;
 b=[rw 100-rw];
